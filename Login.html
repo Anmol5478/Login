@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./project1.css">
+</head>
+
+<body>
+  <div class="container">
+
+<div class="login">
+
+  <div class="logina">
+    
+        <div class="logint">
+          <h3>Login</h3>
+        </div>
+        <div class="loginform">
+
+          <form name="myForm" action="" onSubmit="return validateForm()" method="get">
+            <label for="name">Username</label>
+            <input type="text" name="fname" id="name">
+            <br>
+            <label for="pass">Password</label>
+            <input type="password" name="" id="">
+            <br>
+            <button type="submit" class="btn" value="Submit" id="submit">Submit</button>
+          </form>
+           <p>New One? <a href="./Regis.html">Register Now</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+  function passForm() {
+    let y = document.forms["reg"]["pass"].value;
+    let z = document.forms["reg"]["conpass"].value;
+    if (y == z) {
+      alert("Account Sucessfully Created")
+      return True;
+    }
+    else {
+      alert("Password does not match")
+    }
+  }
+
+  function validateForm() {
+    let x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    else if (x == isAlpha() && x == isNum()) {
+      //   text="valid";
+      alert("Input not valid")
+    }
+    else {
+      //   text="Not valid"
+      alert("form submited")
+    }
+    console.log("HI");
+
+
+
+  }
+  function num() {
+
+    let y = document.getElementById("name").values;
+    let text;
+    if (isAlpha(y) && isNum(y)) {
+      //   text="valid";
+      alert("Input not valid")
+    }
+    else {
+      //   text="Not valid"
+      alert("form submited")
+    }
+    console.log(text)
+  }
+</script>
+
+</html>
