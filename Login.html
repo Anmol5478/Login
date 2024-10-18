@@ -37,45 +37,7 @@
   </div>
 </div>
 </body>
-<script>
-
-
-  function validateForm() {
-    let x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-      alert("UserName must be filled out");
-      return false;
-    }
-    else if (x === isAlpha() && x === isNum()) {
-      //   text="valid";
-      alert("Form Submitted")
-      return True;
-
-    }
-    else {
-      //   text="Not valid"
-      alert("form submited")
-      return False;
-    }
-    console.log("HI");
-
-
-
-  }
-  function num() {
-
-    let y = document.getElementById("name").values;
-    let text;
-    if (isAlpha(y) && isNum(y)) {
-      //   text="valid";
-      alert("Input not valid")
-    }
-    else {
-      //   text="Not valid"
-      alert("form submited")
-    }
-    console.log(text)
-  }
+<script src="./login.js">
 </script>
 
 </html>

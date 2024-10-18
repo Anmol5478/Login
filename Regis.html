@@ -53,24 +53,7 @@
     </div>
   </div>
 
-  <script>
-    function passForm() {
-      var password = document.forms["reg"]["pass"].value;
-      var confirmPassword = document.forms["reg"]["conpass"].value;
-      if (password===" " || confirmPassword===" ") {
-        alert("Account Successfully Created");
-        return true;  // Allow form submission
-      } 
-      else if(password===confirmPassword){
-        alert("Please Enter the password");
-        return False;
-
-      }
-      else {
-        alert("Check Your password");
-        return false;  // Prevent form submission
-      }
-    }
+  <script src="./login.js">
   </script>
 </body> 
 
