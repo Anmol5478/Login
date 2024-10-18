@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./project1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./project1.css">
 </head>
+
 <body>
   <div class="container">
-
     <div class="login">
-      
-        <div class="reg">
-          <div>
-  
-            <h3>Register Now</h3>
-          </div>
-          <div class="Formreg">
-  
-            <form action="" name="reg" onSubmit="return passForm()">
-              <label for="firstname">First name</label>
-              <input type="text">
-              <br>
-              <label for="lastname">Last Name</label>
-              <input type="text">
-              <br>
-              <label for="email">Email:</label>
-              <input type="email">
-              <br>
-              <label for="Password" name="pass">Password</label>
-              <input type="password">
-              <br>
-              <label for="confirm" name="conpass">Confirm Password</label>
-              <input type="password">
-              <br><br>
-              <button type="submit" class="btn2" value="submit" id="submit1"> Submit</button>
-            </form>
-            <p>Have a account? <a href="./Login.html">Login</a></p>
-          </div>
-          
+      <div class="Formreg">
+        <h1>Register Now</h1>
+        <hr width="100%" size="2" color="white" length="98%">
+        <div class="form-container">
+          <form action="" name="reg" onsubmit="return passForm()">
+            <div class="Name">
+              <div class="first">
+                <label for="firstname">First name</label>
+                <input type="text">
+              </div>
+              <div class="last">
+                <label for="lastname">Last Name</label>
+                <input type="text">
+              </div>
+            </div>
+            <br>
+            <label for="username">UserName</label>
+            <input type="text" name="" id="">
+            <br>
+            <label for="email">Email/Phone No.</label>
+            <input type="email" style="border: none;">
+            <br>
+            <label for="password" name="pass">Password</label>
+            <input type="password" name="pass" id="password">
+            <br>
+            <label for="confirm" name="conpass">Confirm Password</label>
+            <input type="password" name="conpass" id="confirm_password">
+            <br>
+            <button type="submit">Submit</button>
+          </form>
+          <p>Have an account? <a href="./Login.html">Login</a></p>
         </div>
-        
       </div>
-      </body>
-      </html>
+
+      <div class="reg">
+        <h2>New one?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse deleniti natus id eaque dolorum dolores
+          recusandae nostrum harum tempora beatae?</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function passForm() {
+      var password = document.forms["reg"]["pass"].value;
+      var confirmPassword = document.forms["reg"]["conpass"].value;
+      if (password===" " || confirmPassword===" ") {
+        alert("Account Successfully Created");
+        return true;  // Allow form submission
+      } 
+      else if(password===confirmPassword){
+        alert("Please Enter the password");
+        return False;
+
+      }
+      else {
+        alert("Check Your password");
+        return false;  // Prevent form submission
+      }
+    }
+  </script>
+</body> 
+
+</html>
