@@ -4,43 +4,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./project1.css">
+  <title>Login</title>
+  <!-- <link rel="stylesheet" href="./project1.css"> -->
 </head>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: #333;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  .login1, .logint {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .login1 {
+    background-color: #f9f9f9;
+  }
+  .loginform h1 {
+    color: #4e54c8;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  hr {
+    width: 100%;
+    border: 0;
+    border-top: 2px solid #4e54c8;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+  label {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    align-self: flex-start;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #4e54c8;
+    box-shadow: 0 0 8px rgba(78, 84, 200, 0.5);
+    outline: none;
+  }
+  button {
+    background-color: #4e54c8;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  button:hover {
+    background-color: #3b3ec5;
+  }
+  .logint h2 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .logint p {
+    color: black;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  a {
+    color: #4e54c8;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #3b3ec5;
+  }
+  .form-container p {
+    margin-top: 1rem;
+  }
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      max-width: 90vw;
+    }
+    .login1, .logint {
+      width: 100%;
+    }
+  }
+</style>
 
 <body>
   <div class="container">
-
-   <div class="login1">
-    
-        <div class="logint">
-          <h2>Welcome Back</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus aliquam totam quaerat nesciunt veritatis qui maxime eligendi rerum reiciendis?</p>
+    <div class="logint">
+      <h2>Welcome Back</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus aliquam totam quaerat nesciunt veritatis qui maxime eligendi rerum reiciendis?</p>
+    </div>
+    <div class="login1">
+      <div class="loginform">
+        <h1>Login</h1>
+        <hr>
+        <div class="form-container">
+          <form name="myForm" action="" onSubmit="return validateForm()" method="get">
+            <label for="name">Username</label>
+            <input type="text" name="fname" id="name" placeholder="Enter username">
+            
+            <label for="pass">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter password">
+            
+            <a href="#">Forgot Password?</a>
+            <button type="submit" class="btn" value="Submit" id="submit">Submit</button>
+          </form>
+          <p>New here? <a href="./password.html">Register Now</a></p>
         </div>
-        <div class="loginform">
-          <h1>Login</h1>
-          <hr width="100%" size="2" color="white">
-          <div class="form-container">
-
-            <form name="myForm" action="" onSubmit="return validateForm()" method="get">
-              <label for="name">Username</label>
-              <input type="text" name="fname" id="name" placeholder="+91 1234567890">
-              <br>
-              <label for="pass">Password</label>
-              <input type="password" name="" id="" placeholder="Password">
-              <br>
-              <a href="#">Forget Password?</a>
-              <br>
-              <button type="submit" class="btn" value="Submit" id="submit">Submit</button>
-            </form>
-             <p>New One? <a href="./password.html">Register Now</a></p>
-          </div>
-        </div>
+      </div>
     </div>
   </div>
-</div>
 </body>
-<script src="./login.js">
-</script>
+<script src="./login.js"></script>
 
 </html>

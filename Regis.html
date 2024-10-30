@@ -4,49 +4,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./project1.css">
+  <title>Register</title>
+  <!-- <link rel="stylesheet" href="./project1.css"> -->
 </head>
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: #333;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  .Formreg, .reg {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Formreg {
+    background-color: #f9f9f9;
+  }
+  .Formreg h1 {
+    color: #4e54c8;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  hr {
+    width: 100%;
+    border: 0;
+    border-top: 2px solid #4e54c8;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+  label {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    align-self: flex-start;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #4e54c8;
+    box-shadow: 0 0 8px rgba(78, 84, 200, 0.5);
+    outline: none;
+  }
+  button {
+    background-color: #4e54c8;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  button:hover {
+    background-color: #3b3ec5;
+  }
+  .reg h2 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .reg p {
+    color: black;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .reg ul {
+    color: black;
+    font-size: 0.85rem;
+    padding-left: 1rem;
+    text-align: left;
+  }
+  .reg ul li {
+    margin-bottom: 0.5rem;
+  }
+  a {
+    color: #4e54c8;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #3b3ec5;
+  }
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      max-width: 90vw;
+    }
+    .Formreg, .reg {
+      width: 100%;
+    }
+  }
+</style>
 
 <body>
   <div class="container">
-    <div class="login">
-      <div class="Formreg">
-        <h1>Register Now</h1>
-        <hr width="100%" size="2" color="white" length="98%">
-        <div class="form-container">
-          <form action="" name="reg" onsubmit="return passForm()">
-            <label for="phone">Phone No.</label>
-            <input type="text" name="phone" placeholder="+91 1234567890">
-            <br>
-            <label for="password" name="pass"> Create Password</label>
-            <input type="password" name="pass" id="password" placeholder="Enter password">
-            <br>
-            <label for="confirm" name="conpass">Confirm Password</label>
-            <input type="password" name="conpass" id="confirm_password" placeholder="Confirm Password">
-            <br>
-            <button type="submit">Submit</button>
-          </form>
-          <p>Have an account? <a href="./Login.html">Login</a></p>
-        </div>
-      </div>
+    <div class="Formreg">
+      <h1>Register Now</h1>
+      <hr>
+      <form action="" name="reg" onsubmit="return passForm()">
+        <label for="phone">Phone No.</label>
+        <input type="text" name="phone" placeholder="+91 1234567890" required>
 
-      <div class="reg">
-        <h2>New one?</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse deleniti natus id eaque dolorum dolores
-          recusandae nostrum harum tempora beatae?</p>
-          <ul>
-            <li>Password must have atleast 8 character</li>
-            <li>Password must have an Upper case character</li>
-            <li>Passowrd must have a number</li>
-            <li>A special Character must be there</li>
-          </ul>
-      </div>
+        <label for="password">Create Password</label>
+        <input type="password" name="pass" id="password" placeholder="Enter password" required>
+
+        <label for="confirm">Confirm Password</label>
+        <input type="password" name="conpass" id="confirm_password" placeholder="Confirm Password" required>
+
+        <button type="submit">Submit</button>
+      </form>
+      <br>
+      <p>Have an account? <a href="./Login.html">Login</a></p>
+    </div>
+
+    <div class="reg">
+      <h2>New here?</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse deleniti natus id eaque dolorum dolores
+        recusandae nostrum harum tempora beatae?</p>
+      <ul>
+        <li>Password must be at least 8 characters long</li>
+        <li>Password must contain an uppercase letter</li>
+        <li>Password must contain a number</li>
+        <li>Must include a special character</li>
+      </ul>
     </div>
   </div>
 
-  <script src="./login.js">
-  </script>
-</body> 
+  <script src="./login.js"></script>
+</body>
 
 </html>
