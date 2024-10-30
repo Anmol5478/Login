@@ -1,7 +1,11 @@
 # Login
-![Screenshot from 2024-10-30 00-11-53](https://github.com/user-attachments/assets/01f208bf-bf06-4c39-9527-3557ea8d44c8)
-This is the first page of Creating a user if it does not exist
-or if yor are already an existing user you have this
-![Screenshot from 2024-10-30 00-12-07](https://github.com/user-attachments/assets/601ee4de-1264-4717-84fa-40c89d0be22b)
-And if you continue with phone number you will get ths
-![Screenshot from 2024-10-30 00-12-00](https://github.com/user-attachments/assets/c8e45c11-3a4c-49b0-be95-99b2925a374d)
+This is a New user form with signin also.
+It is a frontend based mini project, The form is fully validated and ready to use in any frontend project.
+![Screenshot from 2024-10-30 15-56-54](https://github.com/user-attachments/assets/8b84d376-86a9-40b6-8418-0ae9ade093e5)
+
+
+https://github.com/user-attachments/assets/5151e66e-5fbc-4f4f-a1f3-f095e376dcc2
+
+![Screenshot from 2024-10-30 15-57-08](https://github.com/user-attachments/assets/40347cc8-695b-4bca-9ffb-fc3582c749ae)
+![Screenshot from 2024-10-30 15-56-58](https://github.com/user-attachments/assets/1bf08d13-b4f3-4ca0-b9ca-e2ab715433a7)
+
